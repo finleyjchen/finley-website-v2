@@ -1,0 +1,21 @@
+{
+  "name": "fjchen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Finley Chen",
+  "license": "MIT",
+  "dependencies": {
+    "baffle": "^0.3.6",
+    "node-sass": "^4.7.2",
+    "scrollreveal": "^3.3.6",
+    "smooth-scroll": "^12.1.5"
+  },
+  "devDependencies": {
+    "underscore": "^1.8.3"
+  }
+}

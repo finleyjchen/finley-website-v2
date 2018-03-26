@@ -1,0 +1,146 @@
+@import 'fonts';
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family:$default;
+}
+
+body {
+  margin:0;
+  background-color: #212121;
+}
+
+main {
+  margin-top:63px;
+}
+#canvas {
+  z-index:-1;
+}
+@import 'header';
+
+@import 'simple-grid';
+
+@import 'skillbar';
+
+ .title {
+   text-shadow:
+   -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000;
+   font-size:1.5rem;
+    .button {
+      margin-top:15px;
+      padding:10px 35px;
+      background-color:transparent;
+      border:2px solid white;
+      border-radius:50px;
+      color:white;
+      text-decoration: none;
+      transition:0.4s ease-out;
+      font-family: "Karla",Helvetica,sans-serif;
+      i {
+        color:white;
+        padding-right:5px;
+        transition:0.4s ease-out;
+      }
+
+    }
+
+    .button:hover {
+      background-color:rgba(255,255,255,.9);
+      color:rgb(101, 106, 156);
+      text-shadow:none;
+      i {
+        color: rgb(101, 106, 156);
+      }
+    }
+
+    .letter {
+      letter-spacing:2px;
+      font-size:30px;
+    }
+}
+
+.active {
+  background-color:#333447;
+  color:white!important;
+}
+
+.landing {
+  text-align:center;
+
+  h1 {
+    color: #fff;
+    margin:100px;
+  }
+}
+
+.opaque {
+
+}
+
+.services {
+  line-height: 50px;
+  margin:100px;
+  h1 {
+    margin:30px;
+  }
+  padding:70px;
+}
+
+.content {
+  width:100%;
+  margin:auto;
+  background-color:#fff;
+  h3 {
+
+  }
+  h3 > i {
+    padding-right:5px;
+  }
+}
+
+.flair {
+  font-size:1.5em;
+}
+
+#wordpress {
+  background-color:#0073aa;
+  h1, h2, h3, h4, p {
+    color:#fff;
+  }
+}
+
+
+@media (max-width:480px) {
+  .landing {
+    h1 {
+      margin:10px;
+      font-size:1.5em;
+    }
+  }
+  .services {
+    padding:20px 10px 10px 10px;
+    margin:20px;
+  }
+  .button {
+    padding:5px!important;
+    font-size:15px;
+    display:block;
+  }
+
+  .content {
+
+  }
+
+  .flair {
+    font-size:1.2em;
+  }
+}
