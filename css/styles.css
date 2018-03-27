@@ -24,6 +24,17 @@ main {
   z-index: -1;
 }
 
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .header {
   background-color: #fff;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
@@ -517,8 +528,12 @@ p {
 }
 
 .landing h1 {
-  color: #fff;
   margin: 100px;
+  color: #fff;
+}
+
+.landing h2 {
+  color: #fff;
 }
 
 .services {
@@ -537,20 +552,16 @@ p {
   background-color: #fff;
 }
 
-.content h3 > i {
+.content .row {
+  padding: 3em 0;
+}
+
+.content i {
   padding-right: 5px;
 }
 
 .flair {
   font-size: 1.5em;
-}
-
-#wordpress {
-  background-color: #0073aa;
-}
-
-#wordpress h1, #wordpress h2, #wordpress h3, #wordpress h4, #wordpress p {
-  color: #fff;
 }
 
 @media (max-width: 480px) {
@@ -567,9 +578,24 @@ p {
     font-size: 15px;
     display: block;
   }
+  .content .row {
+    padding: 0;
+  }
   .flair {
     font-size: 1.2em;
   }
+}
+
+#seo {
+  background-color: #0073aa;
+}
+
+#seo h1, #seo h2, #seo h3, #seo h4, #seo p {
+  color: #fff;
+}
+
+#seo p {
+  font-size: 1.5em;
 }
 
 .footer-text {
@@ -578,5 +604,103 @@ p {
   color: white;
   margin: auto;
   padding: 4em 0em;
+}
+
+.more-link {
+  font-size: 2em;
+  text-decoration: none;
+  border-bottom: 2px solid #212121;
+  border-radius: 50px;
+  transition: 0.4s ease-out;
+  padding: 0em 0.2em;
+  text-align: center;
+  display: block;
+  width: 30%;
+  margin: auto;
+  background-color: white;
+}
+
+.more-link i {
+  font-size: 0.8em;
+  transition: 0.4s ease-out;
+  padding-left: 5px;
+}
+
+.more-link:hover {
+  background-color: black;
+  color: white;
+}
+
+.more-link:hover i {
+  color: white;
+}
+
+.about h1, .about h2 {
+  text-align: center;
+}
+
+#workhistory .time {
+  border-right: 1.5px dashed rgba(0, 0, 0, 0.6);
+  width: 50%;
+  float: left;
+  text-align: right;
+  padding: 1em;
+}
+
+#workhistory .time div {
+  height: 200px;
+}
+
+#workhistory .time div strong {
+  font-size: 1.2em;
+}
+
+#workhistory .time div small {
+  font-size: 1em;
+}
+
+#workhistory .time div small, #workhistory .time div strong {
+  display: block;
+}
+
+#workhistory .time div span {
+  float: right;
+}
+
+#workhistory .job {
+  width: 50%;
+  padding: 1em;
+  float: right;
+  text-align: left;
+}
+
+#workhistory .job div {
+  height: 200px;
+}
+
+#workhistory .job div p {
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  #workhistory .time {
+    padding: 0.5em;
+  }
+  #workhistory .job {
+    padding: 0.5em;
+  }
+  #workhistory .job p {
+    font-size: 0.85em;
+    line-height: 15px;
+  }
+}
+
+#yourchristmasstore {
+  background-color: #d42642;
+}
+
+#yourchristmasstore h1, #yourchristmasstore h2, #yourchristmasstore h3, #yourchristmasstore p, #yourchristmasstore ul, #yourchristmasstore li, #yourchristmasstore strong, #yourchristmasstore small, #yourchristmasstore a {
+  color: #fff;
+  text-decoration: none;
 }
 /*# sourceMappingURL=styles.css.map */

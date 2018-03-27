@@ -5,6 +5,8 @@ sr.reveal('#seo');
 sr.reveal('#webdev', { duration: 200 });
 sr.reveal('.letter', { duration: 2000 }, 50);
 sr.reveal('.services', {duration: 1000});
+sr.reveal('#workhistory', {duration:200});
+sr.reveal('#skills', {duration:200});
 var scroll = new SmoothScroll('a[href*="#"]');
 var b = baffle('.baffle', {
     characters: '{][][][][]<>101010{][12]}}',
