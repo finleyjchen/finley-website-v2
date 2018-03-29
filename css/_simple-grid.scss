@@ -1,34 +1,15 @@
-// SIMPLE GRID - SASS/SCSS
 
-
-// fonts
-$font-family: 'Karla', Helvetica, sans-serif;
-$font-weight-light: 300;
-$font-weight-regular: 400;
-$font-weight-heavy: 700;
-$font-height: 1.5;
-
-// colors
-$dark-grey: #333447;
-$dark-gray: #333447; // for the Americans
 
 // universal
 
 html,
 body {
-  height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
   left: 0;
   top: 0;
   font-size: 100%;
-}
-
-* {
-  font-family: $font-family;
-  color: $dark-grey;
-  line-height: $font-height;
 }
 
 // typography

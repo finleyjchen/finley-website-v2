@@ -17,15 +17,40 @@
 <body>
 	<header class="header">
   <a href="index.html" class="logo">Finley Chen</a>
+  <div id="mobile-contact"><a href="#">contact</a></div>
   <input class="menu-btn" type="checkbox" id="menu-btn" />
   <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
   <ul class="menu">
     <li><a href="services.html">Services</a></li>
 		<li><a href="about.html">About</a></li>
-		<li><a href="#about">Portfolio</a></li>
-		<li><a href="#about" id="contactbtn">Contact</a></li>
+		<li><a href="portfolio.html">Portfolio</a></li>
+		<li><a href="#" id="contactbtn">Contact</a></li>
   </ul>
 </header>
+
+<div id="myModal" class="modal">
+
+	<!-- Modal content -->
+	<div class="modal-content">
+	  <div class="modal-header">
+		<span class="close">&times;</span>
+		<h2>Contact Me</h2>
+		<small>contact form provided by <a href="https://formspree.io">formspree.io</a></small>
+	  </div>
+	  <div class="modal-body">
+		<!-- Modal content -->
+		<form class="contactform" method="POST" action="https://formspree.io/finleyjchen@gmail.com">
+			<input type="text" name="name" placeholder="Name">
+	
+			<input type="email" name="email" placeholder="Your email">
+			<textarea name="message" placeholder="Your message"></textarea>
+			<button type="submit">Send</button>
+		</form>
+	  </div>
+	</div>
+  
+  </div>
+	
 
 <main>
 <div class="landing">
@@ -35,7 +60,7 @@
 					<h1 class="baffle">i'm a developer</h1>
 					<h1 class="baffle1">i make things on the internet</h1>
 					<a href="services.html" class="button">services</a>
-					<a href="contact.html" class="button">contact</a>
+					<a href="about.html" class="button">about me</a>
 
 		 	</div>
 		 </div>

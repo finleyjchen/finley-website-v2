@@ -29,3 +29,23 @@ jQuery(document).ready(function(){
 		},2000);
 	});
 });
+
+var btn = document.getElementById("contactbtn");
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+
+var modal = document.getElementById('myModal');
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

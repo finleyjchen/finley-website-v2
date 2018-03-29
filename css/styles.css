@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Karla:400,700|Nunito+Sans:300,300i,400,400i,600,600i,700,700i,800,900");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i");
+* {
+  font-family: "Nunito Sans";
+  color: #333447;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "IBM Plex Sans";
+}
+
 html {
   box-sizing: border-box;
 }
@@ -33,6 +44,15 @@ main {
   content: "";
   clear: both;
   display: table;
+}
+
+:target:before {
+  content: "";
+  display: block;
+  height: 60px;
+  /* fixed header height*/
+  margin: -60px 0 0;
+  /* negative fixed header height */
 }
 
 .header {
@@ -178,27 +198,28 @@ main {
   color: white;
 }
 
+#mobile-contact {
+  display: none;
+}
+
 @media (max-width: 480px) {
   #contactbtn {
     display: none;
+  }
+  #mobile-contact {
+    display: inline-block;
+    height: 100%;
   }
 }
 
 html,
 body {
-  height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
   left: 0;
   top: 0;
   font-size: 100%;
-}
-
-* {
-  font-family: "Karla", Helvetica, sans-serif;
-  color: #333447;
-  line-height: 1.5;
 }
 
 h1 {
@@ -480,12 +501,138 @@ p {
   color: rgba(0, 0, 0, 0.4);
 }
 
-.title {
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  font-size: 1.5rem;
+.contactform input {
+  margin: 1em 0;
 }
 
-.title .button {
+.contactform input[type="text"], .contactform input[type="email"], .contactform textarea {
+  display: block;
+  margin: auto;
+  width: 60%;
+  padding: 20px;
+}
+
+.contactform textarea {
+  height: 200px;
+}
+
+.contactform button {
+  display: block;
+  margin: 10px auto;
+  color: black;
+  background-color: white;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius: 50px;
+  width: 100px;
+  transition: 0.4s ease-out;
+}
+
+.contactform button:hover {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .contactform input[type="text"], .contactform input[type="email"], .contactform textarea {
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  border-radius: 50px;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.close:hover,
+.close:focus {
+  color: #999999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 3px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.modal-header h2 {
+  color: black;
+  padding: none;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.button {
   margin-top: 15px;
   padding: 10px 35px;
   background-color: transparent;
@@ -497,20 +644,25 @@ p {
   font-family: "Karla",Helvetica,sans-serif;
 }
 
-.title .button i {
+.button i {
   color: white;
   padding-right: 5px;
   transition: 0.4s ease-out;
 }
 
-.title .button:hover {
+.button:hover {
   background-color: rgba(255, 255, 255, 0.9);
   color: #656a9c;
   text-shadow: none;
 }
 
-.title .button:hover i {
+.button:hover i {
   color: #656a9c;
+}
+
+.title {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 1.5rem;
 }
 
 .title .letter {
@@ -538,8 +690,8 @@ p {
 
 .services {
   line-height: 50px;
-  margin: 100px;
-  padding: 70px;
+  margin: 4em 0;
+  padding: 3em 0;
 }
 
 .services h1 {
@@ -562,6 +714,12 @@ p {
 
 .flair {
   font-size: 1.5em;
+}
+
+@media (max-width: 1000px) {
+  .button {
+    display: block;
+  }
 }
 
 @media (max-width: 480px) {
@@ -615,7 +773,7 @@ p {
   padding: 0em 0.2em;
   text-align: center;
   display: block;
-  width: 30%;
+  width: 210px;
   margin: auto;
   background-color: white;
 }
@@ -633,6 +791,12 @@ p {
 
 .more-link:hover i {
   color: white;
+}
+
+@media (max-width: 480px) {
+  .more-link {
+    width: 70%;
+  }
 }
 
 .about h1, .about h2 {

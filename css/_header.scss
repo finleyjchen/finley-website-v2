@@ -147,8 +147,17 @@ li a:hover,
     color:white;
 }
 
+#mobile-contact {
+  display:none;
+}
+
 @media (max-width:480px) {
   #contactbtn {
     display:none;
+  }
+  #mobile-contact {
+    display:inline-block;
+    height:100%; 
+
   }
 }
