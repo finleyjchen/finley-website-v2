@@ -225,6 +225,11 @@ main {
   }
 }
 
+#webdev {
+  .more-link {
+    font-size:1em;
+  }
+}
 .about {
   h1, h2 {
     text-align:center;
@@ -294,5 +299,22 @@ main {
   h1, h2, h3, p, ul, li, strong, small, a {
     color:#fff;
     text-decoration: none;
+  }
+}
+
+
+#webdev-info {
+  display:none;
+}
+#webdev-readmore {
+  font-size:2em;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius:50px;
+  transition:0.4s ease-out;
+  padding:0 0.3em;
+  &:hover {
+    color:white;
+    background-color:black;
   }
 }

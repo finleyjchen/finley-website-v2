@@ -49,3 +49,12 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+var weblearn = document.getElementById('webdev-readmore');
+var webinfo = document.getElementById('webdev-info');
+weblearn.onclick = function() {
+    if (webinfo.style.display="none") {
+        webinfo.style.display="block";
+    }
+
+}
