@@ -204,11 +204,7 @@ main {
 
 @media (max-width: 480px) {
   #contactbtn {
-    display: none;
-  }
-  #mobile-contact {
-    display: inline-block;
-    height: 100%;
+    padding: 3px;
   }
 }
 

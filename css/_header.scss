@@ -145,6 +145,7 @@ li a:hover,
 #contactbtn {
     background-color: rgb(101, 106, 156);
     color:white;
+
 }
 
 #mobile-contact {
@@ -153,11 +154,9 @@ li a:hover,
 
 @media (max-width:480px) {
   #contactbtn {
-    display:none;
+    padding:3px;
   }
   #mobile-contact {
-    display:inline-block;
-    height:100%; 
 
   }
 }
