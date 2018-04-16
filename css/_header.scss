@@ -23,13 +23,12 @@ li {
 }
 li a {
   display: block;
-  padding: 20px 20px;
   border-bottom: 3px solid #f4f4f4;
   text-decoration: none;
   text-transform: uppercase;
+  padding:10px;
   letter-spacing: 2px;
   transition:0.4s ease-out;
-  border-radius:50px;
   font-weight:700;
 }
 
@@ -48,6 +47,16 @@ li a:hover,
   letter-spacing: 1px;
 }
 
+.home-logo {
+  a {
+
+  }
+  img {
+    width:100%;
+    height:auto;
+  }
+
+}
 /* menu */
 
 .menu {
@@ -103,7 +112,7 @@ li a:hover,
 }
 
 .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  max-height: 300px;
 }
 
 .menu-btn:checked ~ .menu-icon .navicon {
@@ -126,18 +135,20 @@ li a:hover,
 /* 48em = 768px */
 }
 @media (min-width: 48em) {
+
+  
   .header li {
-    float: left;
+    display:inline-block;
+    width:150px;
   }
   .header li a {
-    padding: 20px 30px;
+    text-align: center;
   }
   .header .menu {
-    clear: none;
-    float: left;
-    max-height: none;
+    display: table;   /* Allow the centering to work */
+    margin: 0 auto;
   }
-  .header .menu-icon {
+  .header .menu-icon, .header .logo {
     display: none;
   }
 }
@@ -145,8 +156,13 @@ li a:hover,
 #contactbtn {
     background-color: rgb(101, 106, 156);
     color:white;
-
+    transition:0.4s ease-out;
+    &:hover {
+      background-color:black;
+    }
 }
+
+
 
 #mobile-contact {
   display:none;
@@ -154,9 +170,12 @@ li a:hover,
 
 @media (max-width:480px) {
   #contactbtn {
-    padding:3px;
   }
   #mobile-contact {
 
+  }
+
+  .home-button {
+    display:none;
   }
 }

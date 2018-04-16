@@ -83,13 +83,12 @@ main {
 
 .header li a {
   display: block;
-  padding: 20px 20px;
   border-bottom: 3px solid #f4f4f4;
   text-decoration: none;
   text-transform: uppercase;
+  padding: 10px;
   letter-spacing: 2px;
   transition: 0.4s ease-out;
-  border-radius: 50px;
   font-weight: 700;
 }
 
@@ -106,6 +105,11 @@ main {
   padding: 10px 20px;
   text-decoration: none;
   letter-spacing: 1px;
+}
+
+.header .home-logo img {
+  width: 100%;
+  height: auto;
 }
 
 .header .menu {
@@ -156,7 +160,7 @@ main {
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  max-height: 300px;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -178,17 +182,18 @@ main {
 
 @media (min-width: 48em) {
   .header li {
-    float: left;
+    display: inline-block;
+    width: 150px;
   }
   .header li a {
-    padding: 20px 30px;
+    text-align: center;
   }
   .header .menu {
-    clear: none;
-    float: left;
-    max-height: none;
+    display: table;
+    /* Allow the centering to work */
+    margin: 0 auto;
   }
-  .header .menu-icon {
+  .header .menu-icon, .header .logo {
     display: none;
   }
 }
@@ -196,6 +201,11 @@ main {
 #contactbtn {
   background-color: #656a9c;
   color: white;
+  transition: 0.4s ease-out;
+}
+
+#contactbtn:hover {
+  background-color: black;
 }
 
 #mobile-contact {
@@ -203,8 +213,8 @@ main {
 }
 
 @media (max-width: 480px) {
-  #contactbtn {
-    padding: 3px;
+  .home-button {
+    display: none;
   }
 }
 
@@ -622,6 +632,8 @@ p {
 .modal-header h2 {
   color: black;
   padding: none;
+  margin-bottom: 0;
+  text-transform: uppercase;
 }
 
 .modal-body {
@@ -758,6 +770,10 @@ p {
   color: white;
   margin: auto;
   padding: 4em 0em;
+}
+
+.footer-text i {
+  color: red;
 }
 
 .more-link {
