@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "baffle": "^0.3.6",
+    "lightbox2": "^2.10.0",
     "node-sass": "^4.7.2",
     "scrollreveal": "^3.3.6",
     "smooth-scroll": "^12.1.5"

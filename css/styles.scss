@@ -47,6 +47,9 @@ main {
 
 @import 'contact';
 
+@import 'portfolio';
+
+@import "~lightbox/dist/lightbox.css";
 
 .button {
   margin-top:15px;
@@ -89,15 +92,17 @@ main {
     }
 }
 
+
 .active {
   background-color:#333447;
   color:white!important;
 }
 
 .landing {
+  padding-top:100px;
   text-align:center;
   h1 {
-    margin:100px;
+    
     color:#fff;
   }
   h2 {
@@ -142,6 +147,11 @@ main {
 
 }
 
+.wordChange {
+  color:#212121;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  display:inline;
+}
 @media (max-width:1000px) {
   .button {
     display:block;
@@ -193,6 +203,7 @@ main {
   padding:4em 0em;
   i {
     color:red;
+    margin:0 0.1em;
   }
 }
 

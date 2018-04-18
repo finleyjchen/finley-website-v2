@@ -20,7 +20,34 @@ var c = baffle('.baffle1', {
   speed:100
 });
 
+var d = baffle('.wordChange', {
+    characters:'<{>/?[0\10{;1}]}',
+    speed:100
+});
+
 c.reveal(2000);
+var textChanger = setInterval(revealText, 3000);
+var verbs = ["create websites", "write about things", "play games"]
+var arrayLength = verbs.length;
+var currentVerb = 0;
+revealText();
+
+// loops through the list verbs and returns the current word.
+// Resets at 0 when reaching the end of the list.
+function revealText() {
+
+    d.reveal(1000);
+    d.text(function() {
+        console.log(currentVerb);
+        if(currentVerb == arrayLength) {
+            currentVerb = 0;
+        }
+        var word = verbs[currentVerb];
+        
+        currentVerb++;
+        return word;
+    });
+}
 
 jQuery(document).ready(function(){
 	jQuery('.skillbar').each(function(){
@@ -50,11 +77,3 @@ window.onclick = function(event) {
     }
 }
 
-var weblearn = document.getElementById('webdev-readmore');
-var webinfo = document.getElementById('webdev-info');
-weblearn.onclick = function() {
-    if (webinfo.style.display="none") {
-        webinfo.style.display="block";
-    }
-
-}

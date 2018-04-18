@@ -199,13 +199,16 @@ main {
 }
 
 #contactbtn {
-  background-color: #656a9c;
-  color: white;
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  border-color: black;
   transition: 0.4s ease-out;
 }
 
 #contactbtn:hover {
   background-color: black;
+  color: white;
 }
 
 #mobile-contact {
@@ -640,6 +643,23 @@ p {
   padding: 2px 16px;
 }
 
+.web-preview {
+  display: none;
+}
+
+.web-preview-m {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .web-preview {
+    width: 100%;
+  }
+  .web-preview-m {
+    width: 100%;
+  }
+}
+
 .button {
   margin-top: 15px;
   padding: 10px 35px;
@@ -684,11 +704,11 @@ p {
 }
 
 .landing {
+  padding-top: 100px;
   text-align: center;
 }
 
 .landing h1 {
-  margin: 100px;
   color: #fff;
 }
 
@@ -722,6 +742,12 @@ p {
 
 .flair {
   font-size: 1.5em;
+}
+
+.wordChange {
+  color: #212121;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  display: inline;
 }
 
 @media (max-width: 1000px) {
@@ -774,6 +800,7 @@ p {
 
 .footer-text i {
   color: red;
+  margin: 0 0.1em;
 }
 
 .more-link {

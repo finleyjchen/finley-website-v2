@@ -154,11 +154,14 @@ li a:hover,
 }
 
 #contactbtn {
-    background-color: rgb(101, 106, 156);
-    color:white;
+    background-color: transparent;
+    color:black;
+    border:2px solid black;
+    border-color:black;
     transition:0.4s ease-out;
     &:hover {
       background-color:black;
+      color:white;
     }
 }
 

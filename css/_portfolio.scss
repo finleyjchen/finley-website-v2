@@ -1,0 +1,18 @@
+.web-preview {
+    display:none;
+}
+
+.web-preview-m {
+    display:none;
+}
+
+@media screen and (min-width:600px) {
+    .web-preview {
+        width:100%;
+    }
+    
+    .web-preview-m {
+        width:100%;
+    }
+    
+}
